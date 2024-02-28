@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   For this _TODO_, write function called count() that takes one parameter:
 #       number  <-- int
@@ -24,11 +24,17 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def count(number):
+    i = 1
+    while i <= number:
+        print(i)
+        i += 1
 
+count(5)
+count(30)
 ###############################################################################
-# TODO: 2. (5 pts)
-#
-#   For this _TODO_, write a function called adder() that will continually ask the use to enter a number (using user input) like so:
+# DONE: 2. (5 pts)
+# For this _TODO_, write a function called adder() that will continually ask the use to enter a number (using user input) like so:
 #
 #       "Please Enter a Number: "
 #
@@ -45,12 +51,41 @@
 #   Make sure to use a *while* loop in your solution. Also, notice how you will use the accumulator pattern for this problem.
 #
 #   Also, make sure to call your function to start things off.
+#   
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def adder():
+    total = 0
+    while True:
+        user_input = int(input("Please Enter a Number: "))
+        if user_input == 0:
+                break
+        total += user_input
+        print(f"The sum is {total}.")
+                  
+adder()
+
+def adder1():
+    total = 0
+    while True:
+        user_input = input("Please Enter a Number: ")
+        try:
+            number = float(user_input)
+            total += number
+        except ValueError:
+            print("Invalid Input! Please enter a valid number.")
+            continue
+
+        if number == 0:
+            break
+
+    print(f"The sum is {total}.")
+
+adder1()
 
 ###############################################################################
-# TODO: 3. EXTRA CREDIT (3 pts)
+# DONE: 3. EXTRA CREDIT (3 pts)
 #
 #   DO NOT attempt this extra credit until you have completed m3!!!
 #   
